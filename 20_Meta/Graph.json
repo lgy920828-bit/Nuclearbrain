@@ -1,0 +1,16 @@
+﻿{
+  "nodes": [
+    {
+      "id": "P-Reinforce_Intro",
+      "title": "P-Reinforce 개요",
+      "path": "10_Wiki/Topics/AI_Agents/P-Reinforce_Intro.md",
+      "raw_source": "00_Raw/2026-04-21/note1.md",
+      "tags": ["agent", "knowledge", "rl"]
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "last_reinforced": "2026-04-21T22:50:00",
+    "total_nodes": 1
+  }
+}
