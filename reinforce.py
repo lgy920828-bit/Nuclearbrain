@@ -20,11 +20,11 @@ class PReinforceEngine:
         self.load_metadata()
 
     def load_metadata(self):
-        with open(GRAPH_FILE, "r", encoding="utf-8") as f:
+        with open(GRAPH_FILE, "r", encoding="utf-8-sig") as f:
             self.graph = json.load(f)
         
     def save_metadata(self):
-        with open(GRAPH_FILE, "w", encoding="utf-8") as f:
+        with open(GRAPH_FILE, "w", encoding="utf-8-sig") as f:
             json.dump(self.graph, f, indent=2, ensure_ascii=False)
 
     def git_sync(self, message):
@@ -80,7 +80,7 @@ github_commit: "TBD"
                 content += f"- [[{f.stem}]]\n"
             content += "\n"
         
-        with open(INDEX_FILE, "w", encoding="utf-8") as f:
+        with open(INDEX_FILE, "w", encoding="utf-8-sig") as f:
             f.write(content)
 
     def process_new_raw_files(self):
