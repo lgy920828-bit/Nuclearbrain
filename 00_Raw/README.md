@@ -1,0 +1,38 @@
+# P-Reinforce: The Autonomous Gardener 🌿
+
+> **"지식의 중력을 거스르는 자율형 지식 자동화 엔진"**
+
+P-Reinforce는 Andre Karpathy의 LLM-Wiki 아키텍처와 강화학습(RL) 이론을 결합한 지식 구조화 시스템입니다. 파편화된 데이터로부터 패턴을 추출하고, 스스로 폴더 트리를 설계하며, 지식 간의 쌍방향 링크를 구축하여 거대한 '외부 뇌'를 형성합니다.
+
+## 🧠 Core Philosophy
+모든 지식 배치는 아래 보상 함수 $R$을 극대화하는 방향으로 최적화됩니다.
+$$R = w_1(\text{Categorization Accuracy}) + w_2(\text{Graph Connectivity}) + w_3(\text{User Satisfaction})$$
+
+## 📂 Folder Structure
+에이전트가 관리하는 표준 위계 구조입니다.
+- **`00_Raw/`**: [불변] 사용자로부터 입력된 가공되지 않은 모든 데이터 (Source of Truth)
+- **`10_Wiki/`**: [자동 구조화] RL 정책에 따라 관리되는 지식 층
+  - `🛠️ Projects`: 목표 중심 요약
+  - `💡 Topics`: 개념 중심 분류 (스스로 생성 및 확장)
+  - `⚖️ Decisions`: 의사결정 기록
+  - `🚀 Skills`: 실행 패턴 및 워크플로우
+- **`20_Meta/`**: 시스템의 두뇌 데이터 (`Graph.json`, `Policy.md`, `Index.md`)
+
+## 🛠️ How to Use
+1. **지식 투입**: `00_Raw/YYYY-MM-DD/` 폴더에 마크다운(.md) 파일을 생성합니다.
+2. **엔진 가동**: `python reinforce.py`를 실행하여 지식 강화 사이클을 시작합니다.
+3. **자율 구조화**: 에이전트(Antigravity)가 내용을 분석하여 적절한 Wiki 카테고리에 배치하고 쌍방향 링크를 생성합니다.
+4. **GitHub 동기화**: 모든 변화는 자동으로 GitHub 저장소에 커밋 및 푸시됩니다.
+
+## 📝 Wiki Template
+모든 문서는 Karpathy Style의 엄격한 규격을 따릅니다.
+- **ID & Metadata**: UUID 및 RL 확신도 기록
+- **The Karpathy Summary**: 핵심을 꿰뚫는 한 줄 통찰
+- **Synthesized Content**: 추출된 패턴과 세부 내용 정리
+- **Knowledge Graph**: 상위/연관 개념의 맵핑
+
+## 🤝 GitHub Protocol
+모든 업데이트는 `[P-Reinforce] {Action_Summary}` 메시지와 함께 커밋됩니다.
+
+---
+*Created and Reinforcing by Antigravity.*
